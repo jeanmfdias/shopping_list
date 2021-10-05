@@ -2,19 +2,45 @@
 <html lang="pt-br">
     <head>
         <meta charset="utf8">
-        <meta name="viewport" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Shopping List</title>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     </head>
     <body>
-        <div>
-            <h1>Shopping List</h1>
-            <ul>
-                <li>Sabão</li>
-                <li>Cloro</li>
-                <li>Detergente</li>
-            </ul>
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <h1>Shopping List</h1>
+                </div>
+                
+                <div class="col s12">
+                    <ul class="collection">
+                        <li class="collection-item">Sabão</li>
+                        <li class="collection-item">Cloro</li>
+                        <li class="collection-item">Detergente</li>
+                    </ul>
+                </div>
+
+                <div class="col s12">
+                    <form>
+                        <div class="row">
+                            <div class="input-field col s10">
+                                <input type="text" name="shopping_item" id="shopping_item" class="validate" placeholder="Digite um item para comprar">
+                                <label for="shopping_item">Item para Compra</label>
+                            </div>
+                            <div class="col s2">
+                                <button class="btn waves-effect waves-light">
+                                    Adicionar
+                                    <i class="material-icons">add</i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
 
         <!-- Compiled and minified JavaScript -->
