@@ -1,16 +1,30 @@
-const shopping_list = document.querySelector('#shopping_list');
-const shopping_item = document.querySelector('#shopping_item');
 const btn_add = document.querySelector('#btn_add');
 
 function addItem() {
-    let value = shopping_item.value;
+    let form = document.querySelector('#shopping_list_form');
+    let shopping_list = document.querySelector('#shopping_list');
     let itemLi = document.createElement('li');
+
+    let item = createItem(form);
+    clearForm(form);
     
-    shopping_item.value = '';
     itemLi.classList.add('collection-item');
-    itemLi.textContent = value;
+    itemLi.textContent = item.value;
 
     shopping_list.appendChild(itemLi);
+}
+
+function createItem(form) {
+    let value = form.shopping_item.value;
+    let item = {
+        value: value
+    };
+
+    return item;
+}
+
+function clearForm(form) {
+    form.shopping_item.value = '';
 }
 
 btn_add.addEventListener('click', (event) => {
