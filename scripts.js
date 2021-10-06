@@ -1,4 +1,5 @@
 const btn_add = document.querySelector('#btn_add');
+const shopping_list = document.querySelector('#shopping_list');
 
 function addItem() {
     let form = document.querySelector('#shopping_list_form');
@@ -31,4 +32,12 @@ function clearForm(form) {
 btn_add.addEventListener('click', (event) => {
     event.preventDefault();
     addItem();
-})
+});
+
+shopping_list.addEventListener('dblclick', (event) => {
+    if (event.target.classList.contains('done')) {
+        event.target.classList.remove('done');
+    } else {
+        event.target.classList.add('done');
+    }
+});
