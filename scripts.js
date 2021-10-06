@@ -9,6 +9,7 @@ function addItem() {
     clearForm(form);
     
     itemLi.classList.add('collection-item');
+    itemLi.classList.add('shopping-list-items');
     itemLi.textContent = item.value;
 
     shopping_list.appendChild(itemLi);

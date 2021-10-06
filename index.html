@@ -8,6 +8,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <div class="container">
@@ -15,12 +16,29 @@
                 <div class="col s12">
                     <h1>Shopping List</h1>
                 </div>
+
+                <div class="col s12">
+                    <form id="shopping_list_search">
+                        <div class="row">
+                            <div class="input-field col s10">
+                                <input type="text" name="shopping_search" id="shopping_search" class="validate" placeholder="Digite sua busca">
+                                <label for="shopping_search">Conteúdo a ser procurado</label>
+                            </div>
+                            <div class="col s2">
+                                <button id="btn_search" class="btn waves-effect waves-light">
+                                    Buscar
+                                    <i class="material-icons">search</i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
                 
                 <div class="col s12">
                     <ul id="shopping_list" class="collection">
-                        <li class="collection-item">Sabão</li>
-                        <li class="collection-item">Cloro</li>
-                        <li class="collection-item">Detergente</li>
+                        <li class="shopping-list-items collection-item">Sabão</li>
+                        <li class="shopping-list-items collection-item">Cloro</li>
+                        <li class="shopping-list-items collection-item">Detergente</li>
                     </ul>
                 </div>
 
@@ -47,5 +65,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
         <script src="./scripts.js"></script>
+        <script src="./search.js"></script>
     </body>
 </html>
