@@ -1,3 +1,5 @@
+import btnRemove from "./remove.js";
+
 function addItem() {
     let form = document.querySelector('#shopping_list_form');
     let shopping_list = document.querySelector('#shopping_list');
@@ -9,6 +11,7 @@ function addItem() {
     itemLi.classList.add('collection-item');
     itemLi.classList.add('shopping-list-items');
     itemLi.textContent = item.value;
+    itemLi.appendChild(btnRemove());
 
     shopping_list.appendChild(itemLi);
 }
